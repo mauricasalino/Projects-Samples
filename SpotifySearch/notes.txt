@@ -1,0 +1,28 @@
+---------------------------------------
+/////////// SPOTIFY SEARCH ///////////
+---------------------------------------
+
+What is an API? Stands for Application Program Interface
+
+* API is a server that knows how to talk to other websites to get data from them
+* We cannot talk to servers directly, it is not allowed. But we can talk through the API, the API can.
+* The API is developed by the company and it determines which information is allowed for users to access or not.
+
+
+Specifications about SPOTIFY:
+
+* Authentication is Required so we need a Proxy
+* The PROXY will provide an authentication frame to log into the API
+
+https://elegant-croissant.glitch.me/spotify
+
+--------------------------------------------------------
+
+When the user clicks on the "more" button, we need to make an ajax request.
+the "url" we make that SECOND ajax request to is the value of "next" that is stored
+in the "response" we got from elegant-croissant
+
+---------------------------------------------------------
+
+When the user clicks the "more" button, the SECOND ajax request should be made
+to "nextUrl"

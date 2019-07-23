@@ -1,0 +1,17 @@
+body {
+    background: url('https://tuul.tv/sites/default/files/styles/1200x630/public/2018-06/screenshot1.png');
+    background-position:top;
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+.repos-container {
+    background-color: orange;
+    color: white;
+    width: 250px;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+}

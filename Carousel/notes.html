@@ -1,0 +1,61 @@
+CAROUSEL /////////////////////////
+
+To Do List for this project:
+
+1. HTML/CSS stuff
+    * A wrapping element containing four kitty elements
+    * Kitty elements are position:absolute; so they stack
+    on top of each other
+    * Kitty elements are width 100% and height 100%
+    * wrapping element is height: 600px
+    * use background-size: cover or object-fit: cover to get
+    the image to fill the container without distortion
+    * overflow: hidden on the container so offscreen kitties cannot scrolled to
+    * translateX kitties to be off screen to the right (100%)
+    * two additional states need to be expressed in CSS: onscreen (translateX(0))
+      and offscreen on the right (transform: translateX(-100%)) and offscreen
+      on the left (transform: translateX(-100%))
+    * for exit and onscreen, transitions are required
+
+    var k = document.getElementByClassName('kitty');
+
+2. JavaScript
+
+var k = document.getElementByClassName('kitty');
+
+      k[0].classList.remove('onscreen');
+      k[0].classList.add('exit');
+      k[1].classList.add('onscreen');
+
+      * Get List of kitty elements
+      * Keep track of the currently onscreen kitty with a
+      variable (0 to start)
+      * A main animation function
+          * removes onscreen class from kitty that has it
+          and adds the exit class to it
+          * updates the variable keeping track of the current
+          * kitty to the next one
+          * add onscreen class to the NEW current one
+          * 'setTimeOut' to do it again soon
+
+      * event is called "transitionend"
+      * a transitionend event handler is required to remove the exit class
+      as soon as the kitty is offscreen
+          * if you add the transitionendhandler inside the main animation
+          function, you need to make sure
+          you remove any previous transitionend transitionend handler
+          that had been assigned
+          *if you use event delegation, you will want to make sure
+          you only do your stuff if the transition that ended
+          is the one for the kitty with the exit class
+      * the best place to 'setTimeOut' again is in the
+      transitionend handler
+
+
+          //ALTERNATIVE JS:
+          // document.addEventListener('transitionend', function(e){
+          //     if (e.target.classList.contains('exit')) {
+          //         e.target.classList.remove('exit');
+          //         setTimeout(moveKitties,2000);
+          //     }
+          // });

@@ -1,0 +1,12 @@
+
+STEPS FOR WORKING WITH Handlebars
+
+1. HTML - write the template (that's the <script> we need)
+2. HTML - create empty <div> where the template will eventually show up on screen
+    * this step dictates WHERE on screen we`ll see the template show up
+
+3. JS -- give handlebars the data it needs to render the template
+    * in this case, give handlebars the "response" array I got back from GitHub as a response.
+
+4. JS -- append the template (which now has the data it needs from JS) to the DOM.
+    * this step will actually render the template on screen so we can see it.

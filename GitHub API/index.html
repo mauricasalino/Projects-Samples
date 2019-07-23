@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>Github Shit</title>
+    </head>
+    <body>
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="password" placeholder="password">
+        <input type="text" name="user-to-search" placeholder="user-to-search">
+        <button type="button" class="submit-button">submit</button>
+    <!-- this is where the repos will show up once I get the response from GitHub -->
+        <div class="repos-container"></div>
+        <!-- these are my handlebars templates! -->
+        <!-- this is step 1 -->
+        <script id="reposTemplate" type="text/x-handlebars-template">
+            {{#repos}}
+                <div>{{ full_name }}</div>
+                {{#owner}}
+                <img src={{ avatar_url }} />
+                {{/owner}}
+            {{/repos}}
+        </script>
+        <script id="commisTemplate" type="text/x-handlebars-template">
+            {{#repos}}
+                <div>{{ commits }}</div>
+            {{/repos}}
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+        <script src="script.js" charset="utf-8"></script>
+    </body>
+</html>
