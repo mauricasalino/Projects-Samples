@@ -1,0 +1,19 @@
+if it is string -------> game over
+
+___________________________________________________
+
+1. reminder - this is an excercise in recursion and working with objects. dont let the node and readline stuff scare you!
+
+2. ask a question to the user
+
+3. when you receive an answer from the user:
+
+* IF IF IF IF IF the user gave us a valid answer
+	* If there is another question to ask, then ask it
+		* in JS terms, that means if the asnwer the user gave us leads to an object, then theres another question to ask.
+	* If there isnt another question to ask, then end the game
+* if the user gives us an invalid answer, then we need to scold the user ("bad user!") and ask the question again.
+
+4.
+ its day 1 of node, dont beat yourself up if you dont get it, no one gets node :)
+_____________________________________________________

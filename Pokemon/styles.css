@@ -1,0 +1,67 @@
+/* https://colorhunt.co/palette/17117 */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+body {
+    background-color: #08d9d6;
+}
+img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 220px;
+    background-color: white;
+}
+p {
+    margin-bottom: 5px;
+}
+h2 {
+    padding: 20px 10px;
+    position: absolute;
+    top: 145px;
+    background-color: #ff2e63;
+    color: #eaeaea;
+    width: 100%;
+    opacity: 0.7;
+    font-size: 30px;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card {
+    position: relative;
+    background-color: #252a34;
+    color: #eaeaea;
+    margin: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    max-width: 250px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.card section:last-child {
+    border-bottom: none;
+}
+section {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ff2e63;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.values {
+    color: #08d9d6;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    min-height: 60px;
+}

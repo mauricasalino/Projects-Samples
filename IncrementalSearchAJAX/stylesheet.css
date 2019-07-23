@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background: url('http://www.clker.com/cliparts/2/Q/s/2/Y/m/mapa-mundi.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+p {
+    font-size: 20px;
+    font-family: Tahoma;
+}
+
+img {
+    height: 25%;
+    width: 25%;
+}
+
+.searchbox {
+    font-weight: bold;
+    font-size: 20px;
+}
+.input {
+    font-size: 30px;
+}
+
+.result {
+    font-size: 25px;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+.resultchild {
+    font-size: 25px;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+.resultchild.highlight {
+    background-color: gray;
+    color: blue;
+}

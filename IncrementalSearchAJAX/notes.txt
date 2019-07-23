@@ -1,0 +1,80 @@
+//////////// Events //////////////////
+--------------------------------------
+
+- Gets highlighted when mouseover
+- when keybords event happen
+- when result get selected
+- when I click outside of it (blur)
+- when I click inside of it (focus)
+
+---------------------------------
+
+1- Input Eventhandler (text field)
+	- get the current value of the text field
+	- if the current value of the text field is an empty string, empty and/or hide the results and end the event handler
+	- loop through the countries and build an array containing only the ones that begin with the current value of the text field
+	- you can use 'toLowerCase' or 'toUpperCase' on both the country and the value to get case insensitivity
+	- 'indexOf' has better compatibility than 'startsWith'
+	- if the array of matches contains more than 4, cut it down
+	- if the array of matches is empty, insert the "no results" message into the result container element
+	- if the array of matches contains one or more, loop through them and create html for each one and insert all of the html into the result  element after the loop
+
+2- Mouseover (individual result elements)
+	- remove the highlight class from whatever element has it (if any)
+	- add the highlight class to the event target
+
+3- Mousedown (individual result elements)
+	- grab the text that is in the event target and set the value of the text field to it
+	- empty and/or hide the results container element
+
+4- KeyDown on the (textfield)
+	- down arrow (40 key code)
+		- if no result element has the highlight class, add the highlight class to the first result element
+		- if the result element that has the highlight class is the last one, do nothing
+		- if a result element other than the last one has the highlight class, remove the highlight class from the one that has it and add it to the next one
+	- up arrow (38 key code) ---------->>>> check bullets !!!
+		- if no result element has the highlight class, add the highlight class to the last result element
+		- if the result element that has the highlight class is the first one, do nothing
+		- if a result element other than the last one has the highlight class, remove the highlight class from the one that has it and add it to the next one
+	- return/enter (13 key code)
+		- grab the text contained by the element that has the highlight class (if there is one) and set the value of the text field to it
+		- empty and/or hide the results
+
+5- "focus" on the text field
+
+	- do the exact same thing you did for the input event
+
+6- "blur" on the text field
+	- empty and/or hide the result container element
+
+	blur happens between mousedown and mouseout
+------------------------------
+var resultsElem = ''
+
+for (var i = 0; i < matches.length; i++) {
+	resultsHtml +=	'<div class='result'>' + matches[i] + '</div>'
+}
+
+resultsElem.html(
+	resultsHtml
+).show();
+
+resultsElem.empty().hide();
+---------------------------------
+
+- There's an empty div with the results
+<div> search
+
+	<div input>
+		<one div for each result>
+		<one div for each result>
+		<one div for each result>
+		<one div for each result>
+	<div result>
+
+
+- for or while loop through array and slice
+
+- .filter() ---> is a loop that array has, you call it and you get a new array with fewer items than the original, it will have as many as many or as fewer as the filter finds
+- .map()
+- .indexof()

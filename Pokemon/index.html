@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="styles.css" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+        <title>Pokemon</title>
+    </head>
+    <body>
+        <div class="curry-info">
+
+        </div>
+
+        <script id="curryid" type="text/x-handlebars-template" >
+            <h1>Cohort: {{name}} </h1>
+            <h3>Nickname: {{nickName}}</h3>
+            <ul>FavFood:
+                {{#favFoods}}
+                    <li> {{this}}</li>
+                {{/favFoods}}
+            </ul>
+
+        </script>
+
+
+        <div class="container">
+            <div class="card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="">
+                <h2>pikachu</h2>
+                <section>
+                    <div class="properties">Type:</div>
+                    <div class="values">
+                        <p>Electric</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="properties">Abilities:</div>
+                    <div class="values">
+                        <p>Lightning-Rod</p>
+                        <p>Static</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="properties">Weight:</div>
+                    <div class="values">
+                        <p>60</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>

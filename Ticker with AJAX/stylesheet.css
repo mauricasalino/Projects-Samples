@@ -1,0 +1,50 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.ticker {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px black solid;
+    height: 2em;
+    line-height: 2em;
+    overflow: hidden;
+}
+
+#ticker2 {
+    bottom: 0;
+    border-bottom: 0;
+    border-top: 1px black solid;
+}
+
+#ticker1 .headlines {
+    left: 100%;
+}
+
+#ticker2 .headlines {
+    right: 100%;
+}
+
+.headlines {
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+}
+
+.headline {
+    font-family: sans-serif;
+    padding-right: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+.headline:hover {
+    color: blue;
+    text-decoration: underline;
+}
